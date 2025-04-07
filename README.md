@@ -6,7 +6,7 @@ For this project, I created a trading algorithm that pulls stock data from Yahoo
 
 Core libraries: pandas, pandas_ta, yfinance, matplotlib  
 
-View [code (Python)](https://github.com/aanshkapadia/algorithmic-trading-using-ta-indicators/blob/main/main.py)
+View [code (Python)](https://github.com/aanshkapadia/algorithmic-trading-ta-indicators/blob/main/main.py)
 </br>
   
 ## Modules
@@ -15,6 +15,7 @@ View [code (Python)](https://github.com/aanshkapadia/algorithmic-trading-using-t
   
 Retrieves price history, calculates TA indicators, and then displays any suggested trade as well as total P&L if said trades were executed during given timeframe.
 
+#  [Inputs]
 #  ticker: stock symbol
 #  interval: interval for calculating technical analysis indicators 
 #           (accepted values: "1m", "2m", "5m", "15m", "30m", "60m")
@@ -44,6 +45,9 @@ Retrieves price history, calculates TA indicators, and then displays any suggest
 2. visualize_indicators(df): 
 
 Visualizes technical analysis indicators using matplotlib.
+
+#  [Inputs]
+#  df: dataframe returned by backtest_stock() function
 ```` 
 
 <img src="images/visualize-1.png"><br/>
@@ -58,6 +62,9 @@ Visualizes technical analysis indicators using matplotlib.
 3. run_live_daytrading_algo(ticker): 
 
 Fetches price history up to current minute, then calculates technical indicators and suggests a trade based on signal_score ('Buy' if >= 3, 'Sell' if <= -3). Repeats every '1m' until market close. 
+
+#  [Inputs]
+#  ticker: stock symbol
 ````  
 
 <img src="images/live-trading.png" style="max-width:900px"><br/><br/>
